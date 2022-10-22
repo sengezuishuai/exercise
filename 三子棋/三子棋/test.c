@@ -43,15 +43,15 @@ void game()
 	}
 	if (ret == '*')
 	{
-		printf("玩家赢啦");
+		printf("玩家赢啦\n");
 	}
 	else if (ret == '#')
 	{
-		printf("电脑赢啦");
+		printf("电脑赢啦\n");
 	}
 	else
 	{
-		printf("平局");
+		printf("平局\n");
 	}
 	DisplayBoard(board, ROW, COL);
 }
@@ -82,3 +82,4 @@ int main()
 	} while (input);
 	return 0;
 }
+

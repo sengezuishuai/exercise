@@ -95,6 +95,22 @@ void ComputerMove(char board[ROW][COL], int row, int col)
 	}
 }
  
+int IsFull(char board[ROW][COL], int row, int col)
+{
+	int i = 0, j = 0;
+	for (i = 0; i < row; i++)
+	{
+		for (j = 0; j < col; j++)
+		{
+			if (board[i][j] == ' ')
+			{
+				return 0;//棋盘没有满
+			}
+		}
+	}
+	return 1;//棋盘满了
+}
+
 //1.玩家赢啦 *
 //2.电脑赢啦 #
 //3.平局 Q
@@ -106,14 +122,14 @@ char IsWin(char board[ROW][COL], int row, int col)
 	int i = 0;
 	for (i = 0; i < row; i++)
 	{
-		if (board[i][0] == board[i][1] && board[i][1] == board[i][2] == ' ');
+		if (board[i][0] == board[i][1] && board[i][1] == board[i][2]&&board[i][1] != ' ');
 		{
 			return board[i][1];
 		}
 	}
 	for (i = 0; i < col; i++)
 	{
-		if (board[0][i] == board[1][i] && board[1][i] == board[2][i] == ' ');
+		if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[1][i] != ' ');
 		{
 			return board[1][i];
 		}
@@ -121,6 +137,10 @@ char IsWin(char board[ROW][COL], int row, int col)
 
 	//对角线
 	if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[1][1] != ' ');
+	{
+		return board[1][1];
+	}
+	if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[1][1] != ' ');
 	{
 		return board[1][1];
 	}
