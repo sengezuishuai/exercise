@@ -1,0 +1,3 @@
+﻿  practice2022_11_09.c
+D:\gitee\practice\practice2022_11_09\practice2022_11_09\practice2022_11_09.c(72,45): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  practice2022_11_09.vcxproj -> D:\gitee\practice\practice2022_11_09\x64\Debug\practice2022_11_09.exe
